@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs';
+import { ArgTypes, Story, Canvas } from '@storybook/blocks';
+import * as ModalStories from './modal.stories';
+
+## Modal
+
+O `Modal` é um componente utilizado para exibir um conteúdo em uma sobreposição na tela.
+
+<Canvas of={ModalStories.Primary} sourceState="hidden" />
+
+<Meta title="components/Modal" of={ModalStories} />
+
+O `Modal` é um componente utilizado para exibir um conteúdo em uma sobreposição na tela. Ele permite definir a largura máxima e altura máxima do modal.
+
+### Exemplo de uso do Modal
+
+```jsx
+<Modal isOpen={true} maxWidth="35rem" maxHeight="30rem">
+  Modal Example
+</Modal>
+```
+
+### Parâmetros
+
+Parâmetros disponíveis para personalizar o componente:
+
+<ArgTypes of={ModalStories} />
+```
