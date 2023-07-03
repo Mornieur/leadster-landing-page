@@ -1,6 +1,12 @@
 import * as S from './styles';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
+
+interface ViewComponentProps {
+  orderList?: string;
+  dropDownText?: string;
+  itemText?: string;
+}
 
 const itemVariants: Variants = {
   open: {
@@ -11,7 +17,11 @@ const itemVariants: Variants = {
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
 
-export const ViewComponent = () => {
+export const ViewComponent: FC<ViewComponentProps> = ({
+  orderList = 'Ordenar por',
+  dropDownText = 'Data de Publicação',
+  itemText = 'Item',
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuItems = [
     'Agencias',
@@ -20,6 +30,7 @@ export const ViewComponent = () => {
     'Geração de Leads',
     'Mídia Paga',
   ];
+
   const [activeButton, setActiveButton] = useState<string | null>(null);
 
   return (
@@ -27,6 +38,7 @@ export const ViewComponent = () => {
       <S.Menu>
         {menuItems.map((item, index) => (
           <S.Button
+            role="button"
             key={index}
             active={activeButton === item}
             onClick={() => {
@@ -37,7 +49,7 @@ export const ViewComponent = () => {
           </S.Button>
         ))}
         <S.OrderList>
-          <p>Ordenar por</p>
+          <p>{orderList}</p>
           <motion.nav
             initial={false}
             animate={isOpen ? 'open' : 'closed'}
@@ -48,7 +60,7 @@ export const ViewComponent = () => {
               whileTap={{ scale: 0.97 }}
               onClick={() => setIsOpen(!isOpen)}
             >
-              Data de Publicação
+              {dropDownText}
               <motion.div
                 variants={{
                   open: { rotate: 180 },
@@ -91,11 +103,11 @@ export const ViewComponent = () => {
                 width: '100%',
               }}
             >
-              <motion.li variants={itemVariants}>Item 1</motion.li>
-              <motion.li variants={itemVariants}>Item 2</motion.li>
-              <motion.li variants={itemVariants}>Item 3</motion.li>
-              <motion.li variants={itemVariants}>Item 4</motion.li>
-              <motion.li variants={itemVariants}>Item 5</motion.li>
+              <motion.li variants={itemVariants}>{itemText}</motion.li>
+              <motion.li variants={itemVariants}>{itemText}</motion.li>
+              <motion.li variants={itemVariants}>{itemText}</motion.li>
+              <motion.li variants={itemVariants}>{itemText}</motion.li>
+              <motion.li variants={itemVariants}>{itemText}</motion.li>
             </motion.ul>
           </motion.nav>
         </S.OrderList>
