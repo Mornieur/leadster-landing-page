@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/addon-docs';
+import { ArgTypes, Story, Canvas } from '@storybook/blocks';
+import * as ViewComponentStories from './viewComponent.stories';
+
+## ViewComponent
+
+O `ViewComponent` é um componente utilizado para visualizar conteúdo.
+
+<Canvas of={ViewComponentStories.Primary} sourceState="hidden" />
+
+<Meta title="/components/ViewComponent" of={ViewComponentStories} />
+
+O `ViewComponent` é um componente utilizado para visualização de botões do menu da página, contando com um filtro.
+
+#### Exemplo de uso do ViewComponent
+
+```jsx
+<ViewComponent
+  orderList="Ordenar por"
+  dropDownText="Data de Publicação"
+  itemText="Item"
+/>
+```
+
+### Parâmetros
+
+Parâmetros disponíveis para personalizar o componente:
+
+<ArgTypes of={ViewComponentStories} />
