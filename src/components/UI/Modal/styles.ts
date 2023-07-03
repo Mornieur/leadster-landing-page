@@ -28,7 +28,7 @@ export const Container = styled.div<ModalProps>`
   border-top: 0.5rem solid var(--leadster-color);
 
   @media (max-width: 400px) {
-    width: 24rem;
+    width: 2rem;
   }
   .title {
     font-size: 1.2rem;
