@@ -25,18 +25,25 @@ export const VideoComponent = () => {
         <ModalView setIsOpen={() => closeModal()} isOpen={isModalOpen} />
       )}
       <S.Container isOpen={isModalOpen}>
-        {videos.map((video) => (
-          <S.VideoCard key={video.id} onClick={openModal}>
+        {videos.map((video, index) => (
+          <S.VideoCard
+            key={video.id}
+            onClick={openModal}
+            data-testid={`video-card-${index}`}
+          >
             <S.PlayIcon>
               <BsFillPlayFill size={'8rem'} color="#fff" />
             </S.PlayIcon>
             <S.VideoPreview>
               <S.ThumbnailImage
                 src={ThumbnailImage.src}
-                alt="Thumbnail"
+                alt={video.alt}
                 height={300}
+                data-testid={`thumbnail-${index}`}
               />
-              <S.Description>{video.title}</S.Description>
+              <S.Description data-testid={`video-title-${index}`}>
+                {video.title}
+              </S.Description>
             </S.VideoPreview>
           </S.VideoCard>
         ))}
