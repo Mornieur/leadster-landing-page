@@ -7,7 +7,6 @@ export const lightTheme = {
     error: '#b00020',
     surface: '#ffffff',
   },
-  // Adicione mais estilos específicos do tema light, se necessário
 };
 
 export const darkTheme = {
@@ -19,7 +18,6 @@ export const darkTheme = {
     error: '#cf6679',
     surface: '#121212',
   },
-  // Adicione mais estilos específicos do tema dark, se necessário
 };
 
 export const customViewports = {
