@@ -30,11 +30,10 @@ export const Button = styled.button<{ active: boolean }>`
   border: 2px solid grey;
   background-color: #fff;
   font-size: 1.2rem;
-  height: 3rem;
   max-width: 300px;
-  font-size: 1rem;
-  max-height: 50px;
+  font-size: 0.9rem;
   height: 100%;
+  height: 46px;
   display: flex;
   align-items: center;
 
