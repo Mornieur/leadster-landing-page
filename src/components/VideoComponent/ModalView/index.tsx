@@ -10,16 +10,15 @@ interface ModalViewProps {
 }
 
 export const ModalView = ({ isOpen = false, setIsOpen }: ModalViewProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+  const [isPlaying, _] = useState(false);
 
   return (
     <S.Container>
       <Modal maxWidth="28rem" isOpen={isOpen}>
-        <S.CloseIcon onClick={() => setIsOpen(false)}>
+        <S.CloseIcon
+          data-testid="modal-close-icon"
+          onClick={() => setIsOpen(false)}
+        >
           <AiOutlineClose />
         </S.CloseIcon>
         <S.Content>
@@ -28,9 +27,6 @@ export const ModalView = ({ isOpen = false, setIsOpen }: ModalViewProps) => {
             <p>Como aumentar sua Geração de Leads feat. Traktor</p>
           </S.Title>
           <S.Video>
-            {/* <video loop muted playsInline className="videoDisplay">
-              <source src="/video/video-example.mp4" width={100} height={100} />
-            </video> */}
             <ReactPlayer
               controls={true}
               url="https://www.youtube.com/watch?v=XIBdJjahUkM"
@@ -40,9 +36,6 @@ export const ModalView = ({ isOpen = false, setIsOpen }: ModalViewProps) => {
               width={'100%'}
               height={'100%'}
             />
-            {/* <button onClick={handlePlayPause}>
-              {isPlaying ? 'Pause' : 'Play'}
-            </button> */}
           </S.Video>
           <S.Description>
             <p>Descrição</p>
