@@ -40,7 +40,11 @@ export const Modal: React.FC<ModalProps> = ({
 
   return (
     <S.ContainerMain>
-      <S.Container maxHeight={maxHeight} maxWidth={maxWidth}>
+      <S.Container
+        maxHeight={maxHeight}
+        maxWidth={maxWidth}
+        data-testid="modal-container"
+      >
         <div
           className={`modal ${isOpen ? 'open' : ''} ${
             isTransitioning ? 'transitioning' : ''
@@ -48,7 +52,9 @@ export const Modal: React.FC<ModalProps> = ({
           onTransitionEnd={handleTransitionEnd}
           onClick={handleOverlayClick}
         >
-          <div onClick={handleModalClick}>{children}</div>
+          <div data-testid="modal-content" onClick={handleModalClick}>
+            {children}
+          </div>
         </div>
       </S.Container>
     </S.ContainerMain>
