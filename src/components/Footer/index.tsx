@@ -7,7 +7,6 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 const SocialMediaLinks = [
   {
     id: 1,
-    alt: 'linkedIn',
     logo: FaLinkedinIn,
     size: '1.5rem',
     color: '#92979e',
@@ -15,7 +14,6 @@ const SocialMediaLinks = [
   },
   {
     id: 2,
-    alt: 'facebook',
     logo: FaFacebookF,
     size: '1.5rem',
     color: '#92979e',
@@ -23,7 +21,6 @@ const SocialMediaLinks = [
   },
   {
     id: 3,
-    alt: 'instagram',
     logo: FaInstagram,
     size: '1.5rem',
     color: '#92979e',
