@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs';
+import { ArgTypes, Story, Canvas } from '@storybook/blocks';
+import * as FormComponentStories from './formComponent.stories';
+
+# FormComponent
+
+O `FormComponent` é um componente utilizado para exibir informações de geração de leads.
+
+<Canvas of={FormComponentStories.Primary} sourceState="hidden" />
+
+<Meta title="components/FormComponent" of={FormComponentStories} />
+
+O `FormComponent` inclui um gráfico, título, informações, botão e informações adicionais.
+
+### Exemplo de uso do FormComponent
+
+```jsx
+<FormComponent
+  title="Pronto para triplicar sua"
+  strongTitle="Geração de Leads?"
+  information="Criação e ativação em"
+  strongInformation="4 minutos."
+  textButton="VER DEMONSTRAÇÃO"
+  cardText="é necessário Cartão de Crédito"
+  strongCardText="Não"
+  satisfactionText="/5 média de satisfação"
+  strongSatisfactionText="4.9"
+/>
+```
+
+### Parâmetros
+
+Parâmetros disponíveis para personalizar o componente:
+
+<ArgTypes of={FormComponentStories} />
