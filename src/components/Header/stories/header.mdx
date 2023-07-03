@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/addon-docs';
+import { ArgTypes, Story, Canvas } from '@storybook/blocks';
+import * as HeaderStories from './header.stories';
+
+## Header
+
+O `Header` é um componente utilizado para exibir o cabeçalho de uma página.
+
+<Canvas of={HeaderStories.Primary} sourceState="hidden" />
+
+<Meta title="components/Header" of={HeaderStories} />
+
+O `Header` é um componente utilizado para exibir o cabeçalho de uma página. Ele exibe um logo, um título principal e um subtítulo.
+
+### Exemplo de uso do Header
+
+```jsx
+<Header
+  minText="WEBNARS EXCLUSIVOS"
+  minTitle="Menos Conversinha"
+  maxTitle="Mais Conversão"
+/>
+```
+
+### Parâmetros
+
+Parâmetros disponíveis para personalizar o componente:
+
+<ArgTypes of={HeaderStories} />
