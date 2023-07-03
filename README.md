@@ -1,38 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Leadster Landing Page
 
-## Getting Started
+Este projeto é a landing page do Leadster, uma plataforma para aumentar em 3x a captação de leads. O objetivo desta página é fornecer informações sobre os serviços e recursos oferecidos pelo Leadster, além de capturar leads por meio de um formulário de contato.
 
-First, run the development server:
+## Tecnologias utilizadas
+
+- Next.js
+- TypeScript
+- Jest
+- React Testing Library
+- Storybook
+
+## Pré-requisitos
+
+Certifique-se de ter o Node.js e o gerenciador de pacotes Yarn instalados em sua máquina antes de prosseguir.
+
+## Instalação
+
+1. Faça o clone deste repositório para o seu ambiente local.
+2. Navegue até o diretório do projeto e execute o seguinte comando para instalar as dependências:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn install
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Executando o projeto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Para executar o projeto em modo de desenvolvimento, utilize o seguinte comando:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+yarn run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Isso iniciará o servidor de desenvolvimento do Next.js e você poderá acessar a landing page no seu navegador em http://localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Executando os testes
 
-## Learn More
+Para executar os testes, utilize o seguinte comando:
 
-To learn more about Next.js, take a look at the following resources:
+```
+yarn test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Isso iniciará a execução dos testes usando o Jest e a React Testing Library.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Visualizando a documentação do Storybook
 
-## Deploy on Vercel
+Para visualizar a documentação interativa dos componentes usando o Storybook, utilize o seguinte comando:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+yarn storybook
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Isso iniciará o servidor do Storybook e você poderá acessar a documentação no seu navegador em http://localhost:6006.
