@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 import * as S from './styles';
 import GraphicImage from '../../assets/images/comparativo_img_CTA.png';
@@ -6,7 +6,29 @@ import SeloRD from '../../assets/images/selo_RD.png';
 import NoCard from '../../assets/images/no-card-dark.webp';
 import Rating from '../../assets/images/rating.webp';
 
-export const FormComponent = () => {
+interface FormComponentProps {
+  title?: string;
+  strongTitle?: string;
+  information?: string;
+  textButton?: string;
+  strongInformation?: string;
+  cardText?: string;
+  strongCardText?: string;
+  satisfactionText?: string;
+  strongSatisfactionText?: string;
+}
+
+export const FormComponent: FC<FormComponentProps> = ({
+  title = 'Pronto para triplicar sua',
+  strongTitle = 'Geração de Leads?',
+  information = 'Criação e ativação em',
+  strongInformation = '4 minutos.',
+  textButton = 'VER DEMONSTRAÇÃO',
+  cardText = 'é necessário Cartão de Crédito',
+  strongCardText = 'Não',
+  satisfactionText = '/5 média de satisfação',
+  strongSatisfactionText = '4.9',
+}) => {
   return (
     <S.Container>
       <S.Graphic>
@@ -19,19 +41,19 @@ export const FormComponent = () => {
       </S.Graphic>
       <S.Info>
         <S.Title>
-          Pronto para triplicar sua <br /> <strong>Geração de Leads?</strong>
+          {title} <br /> <strong>{strongTitle}</strong>
         </S.Title>
         <S.Information>
-          Criação e ativação em <strong>4 minutos</strong>.
+          {information} <strong>{strongInformation}</strong>
         </S.Information>
         <S.Demonstration>
-          <S.Button>VER DEMONSTRAÇÃO</S.Button>
+          <S.Button>{textButton}</S.Button>
           <Image src={SeloRD} alt="selo rd station" width={150} height={150} />
         </S.Demonstration>
         <S.MoreInfo>
           <Image src={NoCard} width={15} height={15} alt="imagem de cartão" />
           <span>
-            <strong>Não</strong> é necessário Cartão de Crédito
+            <strong>{strongCardText}</strong> {cardText}
           </span>
           <Image
             src={Rating}
@@ -41,7 +63,8 @@ export const FormComponent = () => {
             className="stars"
           />
           <span>
-            <strong>4.9</strong>/5 média de satisfação
+            <strong>{strongSatisfactionText}</strong>
+            {satisfactionText}
           </span>
         </S.MoreInfo>
       </S.Info>
