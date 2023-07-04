@@ -1,7 +1,7 @@
 import { GlobalStyle } from '../src/global/styles';
 import * as NextImage from 'next/image';
 import { setupWorker, rest } from 'msw';
-import React, { Suspense } from 'react';
+import React from 'react';
 import type { Preview } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { ThemeProvider } from 'styled-components';
@@ -52,33 +52,12 @@ const preview: Preview = {
       ),
       theme: themes.dark,
     },
-    msw: {
-      handlers: {
-        auth: [
-          rest.get('/essay', (req, res, ctx) => {
-            return res(
-              ctx.json({
-                success: true,
-              })
-            );
-          }),
-          rest.get('/logout', (req, res, ctx) => {
-            return res(
-              ctx.json({
-                success: true,
-              })
-            );
-          }),
-        ],
-      },
-    },
     storySort: {
       order: ['Examples', 'Docs', 'Demo'],
     },
     viewport: {
       viewport: {
         viewports: { ...INITIAL_VIEWPORTS, ...customViewports },
-        defaultViewport: 'iPad',
       },
       defaultViewport: 'someDefault',
     },
@@ -102,15 +81,12 @@ const preview: Preview = {
   decorators: [
     (Story, context) => {
       const theme = context.globals.theme === '' ? darkTheme : lightTheme;
-      const { locale } = context.globals;
 
       return (
-        <Suspense fallback={<div>loading translations...</div>}>
-          <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Story />
-          </ThemeProvider>
-        </Suspense>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Story />
+        </ThemeProvider>
       );
     },
   ],
