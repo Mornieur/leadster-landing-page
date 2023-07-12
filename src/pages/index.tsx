@@ -3,6 +3,7 @@ import { VideoComponent } from '@/components/VideoComponent';
 import { ViewComponent } from '@/components/ViewComponent';
 import { FormComponent } from '@/components/FormComponent/index';
 import { Footer } from '@/components/Footer';
+import FooterProvider from '@/contexts/footer/footerProvider';
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
       <ViewComponent />
       <VideoComponent />
       <FormComponent />
-      <Footer />
+      <FooterProvider>
+        <Footer />
+      </FooterProvider>
     </>
   );
 }
