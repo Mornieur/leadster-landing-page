@@ -1,4 +1,4 @@
-Claro, aqui está uma versão melhorada do readme.md:
+
 Leadster Landing Page
 
 Descrição
