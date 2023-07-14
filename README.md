@@ -29,7 +29,7 @@ Para instalar este projeto, siga estas etapas:
     Faça o clone do repositório para o seu ambiente local.
     Navegue até o diretório do projeto e execute o seguinte comando para instalar as dependências:
 
-yarn install
+```yarn install```
 
 ### Executando o projeto
 
@@ -66,37 +66,6 @@ O código deste projeto está organizado da seguinte forma:
     tests/components: contém os testes dos componentes React usados na aplicação.
     tests/pages: contém os testes das páginas da aplicação.
 
-### Funcionalidades
 
-A landing page do Leadster possui as seguintes funcionalidades:
 
-    Uma seção sobre os serviços e recursos oferecidos pelo Leadster.
-    Um formulário de contato para capturar leads.
-    Uma barra de navegação que permite aos usuários navegar pelas diferentes páginas da landing page.
-
-### Instruções de como rodar o projeto
-
-Para rodar o projeto, siga estas etapas:
-
-    Faça o clone do repositório para o seu ambiente local.
-    Navegue até o diretório do projeto e execute o seguinte comando para instalar as dependências:
-
-``` yarn install ```
-
-    Para executar o projeto em modo de desenvolvimento, execute o seguinte comando:
-
-``` yarn run dev ```
-
-    Isso iniciará o servidor de desenvolvimento do Next.js e você poderá acessar a landing page no seu navegador em http://localhost:3000.
-
-    Para executar os testes, execute o seguinte comando:
-
-``` yarn test ```
-
-    Isso iniciará a execução dos testes usando o Jest e a React Testing Library.
-
-    Para visualizar a documentação interativa dos componentes usando o Storybook, execute o seguinte comando:
-
-``` yarn storybook ```
-
-    Isso iniciará o servidor do Storybook e você poderá acessar a documentação no seu navegador em http://localhost:6006.
+   
