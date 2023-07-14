@@ -1,11 +1,11 @@
 
-Leadster Landing Page
+## Leadster Landing Page
 
 Descrição
 
 Este projeto é a landing page do Leadster, uma plataforma para aumentar em 3x a captação de leads. O objetivo desta página é fornecer informações sobre os serviços e recursos oferecidos pelo Leadster, além de capturar leads por meio de um formulário de contato.
 
-Tecnologias utilizadas
+### Tecnologias utilizadas
 
 Este projeto utiliza as seguintes tecnologias:
 
@@ -15,14 +15,14 @@ Este projeto utiliza as seguintes tecnologias:
     React Testing Library
     Storybook
 
-Pré-requisitos
+### Pré-requisitos
 
 Para executar este projeto, você precisará ter as seguintes coisas instaladas em sua máquina:
 
     Node.js
     Yarn
 
-Instalação
+### Instalação
 
 Para instalar este projeto, siga estas etapas:
 
@@ -31,7 +31,7 @@ Para instalar este projeto, siga estas etapas:
 
 yarn install
 
-Executando o projeto
+### Executando o projeto
 
 Para executar o projeto em modo de desenvolvimento, execute o seguinte comando:
 
@@ -39,7 +39,7 @@ yarn run dev
 
 Isso iniciará o servidor de desenvolvimento do Next.js e você poderá acessar a landing page no seu navegador em http://localhost:3000.
 
-Executando os testes
+ ### Executando os testes
 
 Para executar os testes, execute o seguinte comando:
 
@@ -66,7 +66,7 @@ O código deste projeto está organizado da seguinte forma:
     tests/components: contém os testes dos componentes React usados na aplicação.
     tests/pages: contém os testes das páginas da aplicação.
 
-Funcionalidades
+### Funcionalidades
 
 A landing page do Leadster possui as seguintes funcionalidades:
 
@@ -74,7 +74,7 @@ A landing page do Leadster possui as seguintes funcionalidades:
     Um formulário de contato para capturar leads.
     Uma barra de navegação que permite aos usuários navegar pelas diferentes páginas da landing page.
 
-Instruções de como rodar o projeto
+### Instruções de como rodar o projeto
 
 Para rodar o projeto, siga estas etapas:
 
