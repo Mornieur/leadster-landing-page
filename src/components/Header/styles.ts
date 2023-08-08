@@ -8,6 +8,15 @@ export const Container = styled.div`
   img {
     object-fit: contain;
   }
+
+  article {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-container {
+    width: 100%;
+  }
 `;
 
 export const MinText = styled.span`
