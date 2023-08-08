@@ -26,7 +26,7 @@ Este projeto utiliza as seguintes tecnologias:
 
 ### Pré-requisitos
 
-Para executar este projeto, você precisará ter as seguintes coisas instaladas em sua máquina:
+Para executar este projeto, você precisará ter as seguintes dependências e tecnologias instaladas em sua máquina:
 
     Node.js
     Yarn
