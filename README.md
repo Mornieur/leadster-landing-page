@@ -22,6 +22,7 @@ Este projeto utiliza as seguintes tecnologias:
     Jest
     React Testing Library
     Storybook
+    Framer-motion
 
 ### Pré-requisitos
 
