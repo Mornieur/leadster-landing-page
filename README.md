@@ -9,7 +9,7 @@
   <img src="./src/assets/images/leadster.png" alt='project image' width='600'  />
 </div>
 
-Descrição
+### Descrição
 
 Este projeto é a landing page do Leadster, uma plataforma para aumentar em 3x a captação de leads. O objetivo desta página é fornecer informações sobre os serviços e recursos oferecidos pelo Leadster, além de capturar leads por meio de um formulário de contato.
 
