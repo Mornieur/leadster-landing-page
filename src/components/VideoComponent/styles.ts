@@ -15,6 +15,10 @@ export const ContainerMain = styled.div<ContainerProps>`
       bottom: 0;
       z-index: 9999;
     `};
+
+  .videoGroup {
+    display: flex;
+  }
 `;
 
 export const Container = styled.div<ContainerProps>`

@@ -4,6 +4,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1rem;
+
+  .buttonsMenu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const Menu = styled.div`
@@ -11,9 +18,6 @@ export const Menu = styled.div`
   max-width: 1150px;
   width: 100%;
   height: 100%;
-  height: 65px;
-  max-height: 300px;
-
   padding: 1rem;
   justify-content: center;
   gap: 1rem;
@@ -31,11 +35,15 @@ export const Button = styled.button<{ active: boolean }>`
   background-color: #fff;
   font-size: 1.2rem;
   max-width: 300px;
+  width: 100%;
   font-size: 0.9rem;
-  height: 100%;
-  height: 46px;
+  /* height: 100%; */
+
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  white-space: nowrap;
 
   ${({ active }) =>
     active &&
@@ -47,6 +55,7 @@ export const Button = styled.button<{ active: boolean }>`
 
   @media (max-width: 1060px) {
     font-size: 0.7rem;
+    white-space: normal;
   }
 
   @media (max-width: 400px) {
@@ -81,6 +90,7 @@ export const OrderList = styled.div`
   p {
     padding: 1rem 0.5rem;
     font-weight: 600;
+    white-space: nowrap;
 
     @media (max-width: 900px) {
       display: none;
@@ -90,6 +100,7 @@ export const OrderList = styled.div`
   .menu {
     max-width: 300px;
     width: 100%;
+    white-space: nowrap;
   }
   button {
     border: none;
@@ -104,6 +115,7 @@ export const OrderList = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 
     @media (max-width: 800px) {
       font-size: 0.7rem;
