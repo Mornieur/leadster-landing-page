@@ -1,4 +1,3 @@
-
 ## Leadster Landing Page
 
 Descrição
