@@ -26,7 +26,7 @@ Este projeto utiliza as seguintes tecnologias:
 
 ### Pré-requisitos
 
-Para executar este projeto, você precisará ter as seguintes coisas instaladas em sua máquina:
+Para executar este projeto, você precisará ter as seguintes dependências e tecnologias instaladas em sua máquina:
 
     Node.js
     Yarn
@@ -71,6 +71,6 @@ O código deste projeto está organizado da seguinte forma:
     src/components: contém os componentes React usados na aplicação.
     src/pages: contém as páginas da aplicação.
     src/utils: contém funções e utilitários comuns usados na aplicação.
-    stories/components: contém as histórias do Storybook para os componentes React usados na aplicação.
-    tests/components: contém os testes dos componentes React usados na aplicação.
-    tests/pages: contém os testes das páginas da aplicação.
+    components/stories: contém as histórias do Storybook para os componentes React usados na aplicação.
+    components/tests: contém os testes dos componentes React usados na aplicação.
+    pages/tests: contém os testes das páginas da aplicação.
