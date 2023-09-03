@@ -1,13 +1,19 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import React from 'react';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import StyledComponentsRegistry from '../../lib/registry';
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body>
+          <StyledComponentsRegistry>
+            <Main />
+          </StyledComponentsRegistry>
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
