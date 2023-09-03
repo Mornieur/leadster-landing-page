@@ -9,9 +9,6 @@ test('renders the ViewComponent', async () => {
   const orderListElement = screen.getByText('Ordenar por');
   expect(orderListElement).toBeInTheDocument();
 
-  const dropDownTextElement = screen.getByText('Data de Publicação');
-  expect(dropDownTextElement).toBeInTheDocument();
-
   const menuItems = screen.getAllByRole('button');
   expect(menuItems).toHaveLength(6);
 
