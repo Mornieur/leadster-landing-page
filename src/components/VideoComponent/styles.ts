@@ -9,10 +9,7 @@ export const ContainerMain = styled.div<ContainerProps>`
     isOpen &&
     css`
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0 0 0 0;
       z-index: 9999;
     `};
 
@@ -27,11 +24,12 @@ export const Container = styled.div<ContainerProps>`
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
   justify-items: center;
-  align-items: center;
-  padding: 0 5rem;
+  align-items: stretch;
+  padding: 0 3rem;
 
   @media (max-width: 800px) {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
   }
 `;
 
@@ -47,12 +45,13 @@ export const VideoCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #f5f5f5;
   cursor: pointer;
   transition: transform 0.3s ease-out;
   max-width: 400px;
   width: 100%;
+  height: 100%;
   border-radius: 1rem;
 
   &:hover {
@@ -62,10 +61,7 @@ export const VideoCard = styled.div`
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0 0 0 0;
     background-color: rgba(44, 131, 251, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -78,6 +74,8 @@ export const VideoCard = styled.div`
 
   &:hover ${PlayIcon} {
     opacity: 1;
+    transform: translateY(-50%);
+    top: 40%;
   }
 `;
 
@@ -90,22 +88,22 @@ export const VideoPreview = styled.div`
 export const ThumbnailImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 1rem 1rem 0 0;
 `;
 
 export const Description = styled.p`
-  padding: 1rem 0;
+  padding: 1rem 0.3rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #353453;
 
   @media (max-width: 1000px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   @media (max-width: 800px) {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   &:hover {
