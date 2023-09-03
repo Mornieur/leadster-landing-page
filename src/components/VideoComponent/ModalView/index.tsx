@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Modal } from '../../UI/Modal';
 import * as S from './styles';
 import { AiOutlineClose, AiOutlineCloudDownload } from 'react-icons/ai';
@@ -7,14 +7,19 @@ import ReactPlayer from 'react-player';
 interface ModalViewProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  videoData: { link: string; description: string } | null;
 }
 
-export const ModalView = ({ isOpen = false, setIsOpen }: ModalViewProps) => {
-  const [isPlaying, _] = useState(false);
+export const ModalView = ({
+  isOpen = false,
+  setIsOpen,
+  videoData,
+}: ModalViewProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <S.Container>
-      <Modal maxWidth="28rem" isOpen={isOpen}>
+      <Modal maxWidth="30rem" isOpen={isOpen}>
         <S.CloseIcon
           data-testid="modal-close-icon"
           onClick={() => setIsOpen(false)}
@@ -23,13 +28,12 @@ export const ModalView = ({ isOpen = false, setIsOpen }: ModalViewProps) => {
         </S.CloseIcon>
         <S.Content>
           <S.Title>
-            <p className="webnar">Webnar:</p>
-            <p>Como aumentar sua Geração de Leads feat. Traktor</p>
+            <p>{videoData?.description}</p>
           </S.Title>
           <S.Video>
             <ReactPlayer
               controls={true}
-              url="https://www.youtube.com/watch?v=XIBdJjahUkM"
+              url={videoData?.link}
               playing={isPlaying}
               loop
               muted
@@ -43,8 +47,6 @@ export const ModalView = ({ isOpen = false, setIsOpen }: ModalViewProps) => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-
-            <p>Download</p>
           </S.Description>
           <S.FooterButtons>
             <S.DownloadButtons>
