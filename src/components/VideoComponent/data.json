@@ -1,47 +1,83 @@
 [
   {
     "id": 1,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "Conheça as principais plataformas de Marketing Conversacional",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=yju8RTdhHQ0",
+    "image": "https://i.ytimg.com/vi_webp/yju8RTdhHQ0/maxresdefault.webp",
+    "category": "Marketing Digital",
+    "createdAt": "2023-08-15T09:30:00Z"
   },
   {
     "id": 2,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "Como usar a inteligência artificial nos negócios?",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=lzuB5jLaLWc",
+    "image": "https://i.ytimg.com/vi_webp/lzuB5jLaLWc/maxresdefault.webp",
+    "category": "Tecnologia",
+    "createdAt": "2023-07-20T14:45:00Z"
   },
   {
     "id": 3,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "O custo em mídia paga vai subir com a extinção dos cookies?",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=G_QAY_-P2z8",
+    "image": "https://i.ytimg.com/vi_webp/G_QAY_-P2z8/maxresdefault.webp",
+    "category": "Mídia Paga",
+    "createdAt": "2023-06-10T11:20:00Z"
   },
   {
     "id": 4,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "Demonstração da plataforma de Marketing Conversacional",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=94RY0tD4chE",
+    "image": "https://i.ytimg.com/vi/94RY0tD4chE/maxresdefault.jpg",
+    "category": "Marketing Digital",
+    "createdAt": "2023-08-28T15:10:00Z"
   },
   {
     "id": 5,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "Por que você perde 60% dos leads usando formulários de contato no site?",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=0gma7MHghnM",
+    "image": "https://i.ytimg.com/vi/0gma7MHghnM/maxresdefault.jpg",
+    "category": "Marketing Digital",
+    "createdAt": "2023-07-05T10:00:00Z"
   },
   {
     "id": 6,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "Os passos do Marketing Digital para Startups",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=gK8uPCkka7c",
+    "image": "https://i.ytimg.com/vi_webp/gK8uPCkka7c/maxresdefault.webp",
+    "category": "Marketing Digital",
+    "createdAt": "2023-06-15T13:25:00Z"
   },
   {
     "id": 7,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "Quão grande é o mercado de Mídia Paga? Benchmark global",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=0YcfScAr0DM",
+    "image": "https://i.ytimg.com/vi_webp/0YcfScAr0DM/maxresdefault.webp",
+    "category": "Mídia Paga",
+    "createdAt": "2023-08-10T16:40:00Z"
   },
   {
     "id": 8,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "5 passos para Gerar mais Leads com o Google Ads",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=Rv9kD16Fql4",
+    "image": "https://i.ytimg.com/vi_webp/Rv9kD16Fql4/maxresdefault.webp",
+    "category": "Geração de Leads",
+    "createdAt": "2023-07-18T09:55:00Z"
   },
   {
     "id": 9,
-    "title": "Como aumentar sua geração de leads feat. Traktor",
-    "alt": "Thumbnail"
+    "title": "Como criar um Botão do WhatsApp Flutuante no seu Site",
+    "alt": "Thumbnail",
+    "link": "https://www.youtube.com/watch?v=wXVFYKjVThU",
+    "image": "https://i.ytimg.com/vi/wXVFYKjVThU/maxresdefault.jpg",
+    "category": "Tecnologia",
+    "createdAt": "2023-06-30T12:15:00Z"
   }
 ]
