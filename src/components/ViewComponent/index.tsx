@@ -1,6 +1,7 @@
 import * as S from './styles';
 import { FC, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
+import { orderByValues, useVideoStore } from '@/store';
 
 interface ViewComponentProps {
   orderList?: string;
@@ -19,10 +20,10 @@ const itemVariants: Variants = {
 
 export const ViewComponent: FC<ViewComponentProps> = ({
   orderList = 'Ordenar por',
-  dropDownText = 'Data de Publicação',
   itemText = 'Item',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { category, handleStoreValues, orderBy } = useVideoStore();
   const menuItems = [
     'Agencias',
     'Chatbot',
@@ -30,8 +31,6 @@ export const ViewComponent: FC<ViewComponentProps> = ({
     'Geração de Leads',
     'Mídia Paga',
   ];
-
-  const [activeButton, setActiveButton] = useState<string | null>(null);
 
   return (
     <S.Container>
@@ -50,9 +49,9 @@ export const ViewComponent: FC<ViewComponentProps> = ({
             <S.Button
               role="button"
               key={index}
-              active={activeButton === item}
+              active={category === item}
               onClick={() => {
-                setActiveButton(activeButton === item ? null : item);
+                handleStoreValues('category', item === category ? null : item);
               }}
             >
               {item}
@@ -68,9 +67,11 @@ export const ViewComponent: FC<ViewComponentProps> = ({
             >
               <motion.button
                 whileTap={{ scale: 0.97 }}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
               >
-                {dropDownText}
+                {orderBy}
                 <motion.div
                   variants={{
                     open: { rotate: 180 },
@@ -109,15 +110,19 @@ export const ViewComponent: FC<ViewComponentProps> = ({
                   pointerEvents: isOpen ? 'auto' : 'none',
                   zIndex: isOpen ? '999' : 'none',
                   position: 'absolute',
-                  maxWidth: '300px',
+                  maxWidth: '200px',
                   width: '100%',
                 }}
               >
-                <motion.li variants={itemVariants}>{itemText}</motion.li>
-                <motion.li variants={itemVariants}>{itemText}</motion.li>
-                <motion.li variants={itemVariants}>{itemText}</motion.li>
-                <motion.li variants={itemVariants}>{itemText}</motion.li>
-                <motion.li variants={itemVariants}>{itemText}</motion.li>
+                {orderByValues.map((value, index) => (
+                  <motion.li
+                    onClick={() => handleStoreValues('orderBy', value)}
+                    key={index}
+                    variants={itemVariants}
+                  >
+                    {value}
+                  </motion.li>
+                ))}
               </motion.ul>
             </motion.nav>
           </S.OrderList>
