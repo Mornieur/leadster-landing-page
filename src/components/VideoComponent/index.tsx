@@ -5,7 +5,7 @@ import { ModalView } from './ModalView';
 import { BsFillPlayFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { useVideoStore } from '@/store';
-import { VideoCategory } from '@/pages';
+import { VideoCategory } from '@/pages/videoCategoryTypes';
 
 interface Video {
   id: number;
