@@ -15,7 +15,7 @@ export const ModalView = ({
   setIsOpen,
   videoData,
 }: ModalViewProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, _] = useState(false);
 
   return (
     <S.Container>
