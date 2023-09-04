@@ -5,7 +5,9 @@ import { ModalView } from '../ModalView';
 test('renders modal view and closes it', () => {
   const mockSetIsOpen = jest.fn();
 
-  render(<ModalView isOpen={true} setIsOpen={mockSetIsOpen} />);
+  render(
+    <ModalView videoData={null} isOpen={true} setIsOpen={mockSetIsOpen} />
+  );
 
   const closeIcon = screen.getByTestId('modal-close-icon');
   fireEvent.click(closeIcon);

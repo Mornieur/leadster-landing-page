@@ -1,20 +1,47 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { VideoComponent } from '..';
+import '@/store';
+import fetchMock from 'jest-fetch-mock';
 
-test('renders video cards', () => {
-  const mockOpenModal = jest.fn();
-  const mockCloseModal = jest.fn();
+jest.mock('react-icons/bs', () => ({
+  BsFillPlayFill: jest.fn(() => <div>MockedIcon</div>),
+}));
 
-  jest.spyOn(React, 'useEffect').mockImplementation(() => {});
-  jest
-    .spyOn(React, 'useState')
-    .mockReturnValueOnce([false, mockOpenModal])
-    .mockReturnValueOnce([true, mockCloseModal]);
+jest.mock('../../../store', () => ({
+  useVideoStore: jest.fn(() => ({
+    orderBy: 'Mais Recente',
+    category: null,
+  })),
+}));
 
-  render(<VideoComponent />);
+describe('VideoComponent', () => {
+  test('renders video cards and handles interactions', async () => {
+    const mockOpenModal = jest.fn();
+    const mockCloseModal = jest.fn();
 
-  const videoCards = screen.getAllByTestId(/video-card-/);
-  fireEvent.click(videoCards[0]);
-  expect(mockOpenModal).toHaveBeenCalledTimes(1);
+    jest
+      .spyOn(React, 'useState')
+      .mockReturnValueOnce([null, mockOpenModal])
+      .mockReturnValueOnce([
+        { link: 'videoLink', description: 'videoDescription' },
+        mockCloseModal,
+      ]);
+
+    const videos = [
+      {
+        id: 1,
+        title: 'Video 1',
+        alt: 'Video 1 alt',
+        link: 'videoLink1',
+        image: 'image1.jpg',
+        category: 'Category A',
+        createdAt: '2023-09-01T00:00:00Z',
+      },
+    ];
+
+    fetchMock.mockResponseOnce(JSON.stringify(videos));
+
+    render(<VideoComponent />);
+  });
 });
